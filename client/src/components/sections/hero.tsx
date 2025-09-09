@@ -29,7 +29,7 @@ export default function Hero() {
               <Link href="/services">
                 <Button 
                   size="lg" 
-                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4"
+                  className="bg-white hover:bg-gray-100 text-primary border-2 border-white px-8 py-4"
                   data-testid="hero-cta-secondary"
                 >
                   Explore Services
