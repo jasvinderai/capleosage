@@ -13,6 +13,12 @@ export default function Team() {
       position: "Co-Founder & CTO",
       experience: "12+ years in digital transformation",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
+    },
+    {
+      name: "Morgan Chen",
+      position: "Co-Founder & Chief Design Officer",
+      experience: "10+ years in design strategy",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
     }
   ];
 
@@ -78,7 +84,7 @@ export default function Team() {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-3 gap-6">
             {teamMembers.map((member, index) => (
               <Card key={index} className="text-center" data-testid={`team-member-${index}`}>
                 <CardContent className="p-4">

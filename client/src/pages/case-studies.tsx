@@ -91,14 +91,14 @@ export default function CaseStudies() {
   return (
     <>
       <Helmet>
-        <title>Case Studies | CAPLEO Sage Solutions | Success Stories from Calgary</title>
+        <title>Insights | CAPLEO Sage Solutions | Success Stories from Calgary</title>
         <meta name="description" content="Discover how CAPLEO Sage Solutions has helped Calgary businesses achieve measurable results through data engineering, digital transformation, and design enhancement." />
       </Helmet>
       
       <div className="py-20" data-testid="case-studies-page">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4 text-primary" data-testid="case-studies-title">Success Stories</h1>
+            <h1 className="text-4xl font-bold mb-4 text-primary" data-testid="case-studies-title">Insights</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="case-studies-subtitle">
               Real results from Calgary businesses across industries. See how our proven methodologies deliver measurable outcomes.
             </p>
@@ -106,7 +106,7 @@ export default function CaseStudies() {
           
           {/* Featured Case Studies */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold mb-8 text-primary">Featured Case Studies</h2>
+            <h2 className="text-3xl font-bold mb-8 text-primary">Featured Success Stories</h2>
             <div className="grid lg:grid-cols-3 gap-8">
               {featuredCases.map((caseStudy, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow" data-testid={`featured-case-${index}`}>
@@ -156,7 +156,7 @@ export default function CaseStudies() {
 
           {/* Other Case Studies */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-primary">Additional Success Stories</h2>
+            <h2 className="text-3xl font-bold mb-8 text-primary">Additional Client Insights</h2>
             <div className="space-y-8">
               {otherCases.map((caseStudy, index) => (
                 <Card key={index} className="overflow-hidden" data-testid={`other-case-${index}`}>
