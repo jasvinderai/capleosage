@@ -59,7 +59,7 @@ export default function Header() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground"
                 data-testid="cta-button"
               >
-                Free Assessment
+                Free 30min Consultation
               </Button>
             </Link>
             

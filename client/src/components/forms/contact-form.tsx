@@ -48,7 +48,7 @@ export default function ContactForm() {
     onSuccess: () => {
       toast({
         title: "Success!",
-        description: "We'll respond within 24 hours with your assessment plan.",
+        description: "We'll respond within 24 hours to schedule your consultation.",
       });
       reset();
       queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
@@ -75,7 +75,7 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white p-8 rounded-xl shadow-lg" data-testid="contact-form">
-      <h3 className="text-2xl font-bold mb-6 text-primary">Get Your Free Assessment</h3>
+      <h3 className="text-2xl font-bold mb-6 text-primary">Book Your Free 30min Consultation</h3>
       
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
@@ -161,11 +161,11 @@ export default function ContactForm() {
           className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4"
           data-testid="button-submit"
         >
-          {isSubmitting ? "Submitting..." : "Get Free Assessment"}
+          {isSubmitting ? "Booking..." : "Book Free 30min Consultation"}
         </Button>
         
         <p className="text-sm text-muted-foreground text-center">
-          We'll respond within 24 hours with your assessment plan.
+          We'll respond within 24 hours to schedule your consultation.
         </p>
       </form>
     </div>

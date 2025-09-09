@@ -82,8 +82,11 @@ export default function Footer() {
             </ul>
             
             <div className="mt-6">
-              <h5 className="font-medium text-white mb-3">Download Resources</h5>
-              <a href="#" className="block bg-accent text-accent-foreground px-4 py-2 rounded text-center font-medium hover:bg-accent/90 transition-colors" data-testid="download-resource">
+              <h5 className="font-medium text-white mb-3">Get Started Today</h5>
+              <Link href="/contact" className="block bg-accent text-accent-foreground px-4 py-2 rounded text-center font-medium hover:bg-accent/90 transition-colors mb-3" data-testid="footer-consultation-cta">
+                Free 30min Consultation
+              </Link>
+              <a href="#" className="block bg-white/20 text-white px-4 py-2 rounded text-center font-medium hover:bg-white/30 transition-colors" data-testid="download-resource">
                 Digital Transformation Guide
               </a>
             </div>

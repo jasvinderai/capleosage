@@ -15,7 +15,7 @@ export default function ServicesOverview() {
         "ETL/ELT pipeline implementation",
         "Data governance program"
       ],
-      ctaText: "Start Data Assessment",
+      ctaText: "Free 30min Consultation",
       ctaClass: "bg-secondary hover:bg-secondary/90 text-secondary-foreground"
     },
     {
@@ -28,7 +28,7 @@ export default function ServicesOverview() {
         "Change management & adoption programs",
         "AI & Automation readiness"
       ],
-      ctaText: "Book DX Consultation",
+      ctaText: "Free 30min Consultation",
       ctaClass: "bg-primary hover:bg-primary/90 text-primary-foreground"
     },
     {
@@ -41,7 +41,7 @@ export default function ServicesOverview() {
         "Service design & journey mapping",
         "Marketing materials design"
       ],
-      ctaText: "Request Design Audit",
+      ctaText: "Free 30min Consultation",
       ctaClass: "bg-accent hover:bg-accent/90 text-accent-foreground"
     }
   ];

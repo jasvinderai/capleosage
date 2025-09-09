@@ -16,8 +16,21 @@ export default function Contact() {
             <div>
               <h1 className="text-4xl font-bold mb-6" data-testid="contact-title">Ready to Transform Your Business?</h1>
               <p className="text-xl mb-8 text-gray-100" data-testid="contact-subtitle">
-                Get started with a free assessment and discover how CAPLEO can accelerate your success.
+                Book your free 30-minute consultation today and discover how CAPLEO can accelerate your success.
               </p>
+              
+              <div className="bg-accent/20 p-6 rounded-lg mb-8">
+                <h3 className="text-2xl font-bold mb-3 text-accent">🕐 Free 30-Minute Strategy Session</h3>
+                <p className="text-gray-100 mb-4">
+                  Get personalized insights and actionable recommendations tailored to your business challenges.
+                </p>
+                <ul className="text-gray-100 space-y-2 text-sm">
+                  <li>✓ Assess your current state and identify opportunities</li>
+                  <li>✓ Discuss potential solutions and approaches</li>
+                  <li>✓ Receive initial strategic recommendations</li>
+                  <li>✓ No obligation or sales pressure</li>
+                </ul>
+              </div>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start space-x-4">

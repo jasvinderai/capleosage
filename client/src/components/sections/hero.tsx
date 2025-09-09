@@ -23,7 +23,7 @@ export default function Hero() {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4"
                   data-testid="hero-cta-primary"
                 >
-                  Get Free Assessment
+                  Book Free 30min Consultation
                 </Button>
               </Link>
               <Link href="/services">
