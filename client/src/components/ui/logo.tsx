@@ -11,94 +11,113 @@ export function Logo({ className = "w-12 h-12", animated = false }: LogoProps) {
         className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Outer circle */}
+        {/* Outer circle ring */}
         <circle
           cx="50"
           cy="50"
-          r="48"
+          r="45"
           fill="none"
           stroke="#1e40af"
-          strokeWidth="1.5"
+          strokeWidth="2"
           className={animated ? "animate-pulse" : ""}
         />
         
-        {/* Maze paths - creating a circular maze pattern */}
-        <path
-          d="M 20 50 Q 30 30, 50 35 Q 70 30, 80 50"
-          fill="none"
-          stroke="#1e40af"
-          strokeWidth="1.5"
-          className={animated ? "animate-pulse" : ""}
-          style={animated ? { animationDelay: "0.2s" } : {}}
-        />
-        
-        <path
-          d="M 50 20 Q 65 35, 50 50 Q 35 65, 50 80"
-          fill="none"
-          stroke="#1e40af"
-          strokeWidth="1.5"
-          className={animated ? "animate-pulse" : ""}
-          style={animated ? { animationDelay: "0.4s" } : {}}
-        />
-        
-        <path
-          d="M 30 30 Q 40 40, 50 35 Q 60 30, 70 40"
-          fill="none"
-          stroke="#1e40af"
-          strokeWidth="1.5"
-          className={animated ? "animate-pulse" : ""}
-          style={animated ? { animationDelay: "0.6s" } : {}}
-        />
-        
-        <path
-          d="M 30 70 Q 40 60, 50 65 Q 60 70, 70 60"
-          fill="none"
-          stroke="#1e40af"
-          strokeWidth="1.5"
-          className={animated ? "animate-pulse" : ""}
-          style={animated ? { animationDelay: "0.8s" } : {}}
-        />
-        
-        {/* Inner maze rings */}
+        {/* Second ring with gaps */}
         <circle
           cx="50"
           cy="50"
-          r="25"
+          r="38"
           fill="none"
           stroke="#1e40af"
-          strokeWidth="1"
-          strokeDasharray="5,3"
+          strokeWidth="2"
+          strokeDasharray="15,8"
           className={animated ? "animate-spin" : ""}
-          style={animated ? { animationDuration: "8s", animationDelay: "1s" } : {}}
+          style={animated ? { animationDuration: "12s", animationDelay: "0.3s" } : {}}
         />
         
+        {/* Third ring with different pattern */}
         <circle
           cx="50"
           cy="50"
-          r="15"
+          r="31"
           fill="none"
           stroke="#1e40af"
-          strokeWidth="1"
-          strokeDasharray="3,2"
+          strokeWidth="2"
+          strokeDasharray="8,6"
+          className={animated ? "animate-spin" : ""}
+          style={animated ? { animationDuration: "10s", animationDirection: "reverse", animationDelay: "0.6s" } : {}}
+        />
+        
+        {/* Fourth ring */}
+        <circle
+          cx="50"
+          cy="50"
+          r="24"
+          fill="none"
+          stroke="#1e40af"
+          strokeWidth="2"
+          strokeDasharray="12,4"
+          className={animated ? "animate-spin" : ""}
+          style={animated ? { animationDuration: "8s", animationDelay: "0.9s" } : {}}
+        />
+        
+        {/* Fifth ring */}
+        <circle
+          cx="50"
+          cy="50"
+          r="17"
+          fill="none"
+          stroke="#1e40af"
+          strokeWidth="2"
+          strokeDasharray="6,3"
           className={animated ? "animate-spin" : ""}
           style={animated ? { animationDuration: "6s", animationDirection: "reverse", animationDelay: "1.2s" } : {}}
         />
         
-        {/* Center yellow dot */}
+        {/* Inner ring */}
         <circle
           cx="50"
           cy="50"
-          r="4"
+          r="10"
+          fill="none"
+          stroke="#1e40af"
+          strokeWidth="1.5"
+          strokeDasharray="4,2"
+          className={animated ? "animate-spin" : ""}
+          style={animated ? { animationDuration: "4s", animationDelay: "1.5s" } : {}}
+        />
+        
+        {/* Maze connecting lines */}
+        <path
+          d="M 35 50 L 65 50"
+          stroke="#1e40af"
+          strokeWidth="1.5"
+          className={animated ? "animate-pulse" : ""}
+          style={animated ? { animationDelay: "0.5s" } : {}}
+        />
+        <path
+          d="M 50 35 L 50 65"
+          stroke="#1e40af"
+          strokeWidth="1.5"
+          className={animated ? "animate-pulse" : ""}
+          style={animated ? { animationDelay: "0.7s" } : {}}
+        />
+        
+        {/* Center yellow dot with animation */}
+        <circle
+          cx="50"
+          cy="50"
+          r="5"
           fill="#fbbf24"
           className={animated ? "animate-ping" : ""}
-          style={animated ? { animationDelay: "1.5s" } : {}}
+          style={animated ? { animationDelay: "1.8s" } : {}}
         />
         
         {/* Static center dot */}
         <circle
           cx="50"
           cy="50"
-          r="3"
+          r="4"
           fill="#f59e0b"
         />
       </svg>
