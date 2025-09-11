@@ -26,13 +26,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
           message: contact.description || 'No message provided'
         };
         
-        const emailSent = await sendEmail({
-          to: "capleosage@outlook.com",
-          from: "noreply@capleosage.com", // This will need to be verified with SendGrid
-          subject: `New Contact Form Submission from ${contact.name}`,
-          text: createContactEmailText(emailData),
-          html: createContactEmailHTML(emailData)
-        });
+        const emailSent = await sendEmail(
+          "capleosage@outlook.com",
+          `New Contact Form Submission from ${contact.name}`,
+          createContactEmailText(emailData),
+          createContactEmailHTML(emailData)
+        );
         
         if (!emailSent) {
           console.warn("Failed to send email notification, but contact was saved");
@@ -209,13 +208,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
           timeline: booking.timeline
         };
         
-        const emailSent = await sendEmail({
-          to: "capleosage@outlook.com",
-          from: "noreply@capleosage.com",
-          subject: `New Consultation Booking: ${booking.consultationType} - ${booking.name}`,
-          text: createBookingEmailText(emailData),
-          html: createBookingEmailHTML(emailData)
-        });
+        const emailSent = await sendEmail(
+          "capleosage@outlook.com",
+          `New Consultation Booking: ${booking.consultationType} - ${booking.name}`,
+          createBookingEmailText(emailData),
+          createBookingEmailHTML(emailData)
+        );
         
         if (!emailSent) {
           console.warn("Failed to send booking email notification, but booking was saved");
@@ -266,13 +264,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
             level: validatedData.level
           };
           
-          const emailSent = await sendEmail({
-            to: "capleosage@outlook.com",
-            from: "noreply@capleosage.com",
-            subject: `New Assessment Completed: ${emailData.level} (${emailData.score}%) - ${emailData.name}`,
-            text: createAssessmentEmailText(emailData),
-            html: createAssessmentEmailHTML(emailData)
-          });
+          const emailSent = await sendEmail(
+            "capleosage@outlook.com",
+            `New Assessment Completed: ${emailData.level} (${emailData.score}%) - ${emailData.name}`,
+            createAssessmentEmailText(emailData),
+            createAssessmentEmailHTML(emailData)
+          );
           
           if (!emailSent) {
             console.warn("Failed to send assessment email notification, but result was saved");

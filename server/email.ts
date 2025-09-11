@@ -1,12 +1,17 @@
 // SendGrid email service - using javascript_sendgrid integration
 import { MailService } from '@sendgrid/mail';
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY environment variable must be set");
-}
+// Check if SendGrid is configured
+const SENDGRID_CONFIGURED = !!process.env.SENDGRID_API_KEY;
 
-const mailService = new MailService();
-mailService.setApiKey(process.env.SENDGRID_API_KEY);
+let mailService: MailService | null = null;
+
+if (SENDGRID_CONFIGURED) {
+  mailService = new MailService();
+  mailService.setApiKey(process.env.SENDGRID_API_KEY!);
+} else {
+  console.warn("SENDGRID_API_KEY not configured - email sending disabled");
+}
 
 interface EmailParams {
   to: string;
@@ -16,23 +21,26 @@ interface EmailParams {
   html?: string;
 }
 
-export async function sendEmail(params: EmailParams): Promise<boolean> {
+export async function sendEmail(to: string, subject: string, text: string, html?: string): Promise<boolean> {
+  if (!SENDGRID_CONFIGURED || !mailService) {
+    console.log(`Email sending disabled - would have sent: "${subject}" to ${to}`);
+    return false;
+  }
+
   try {
     const emailData: any = {
-      to: params.to,
-      from: params.from,
-      subject: params.subject,
+      to: to,
+      from: "noreply@capleosage.com", // Use consistent from address
+      subject: subject,
+      text: text,
     };
     
-    if (params.text) {
-      emailData.text = params.text;
-    }
-    
-    if (params.html) {
-      emailData.html = params.html;
+    if (html) {
+      emailData.html = html;
     }
     
     await mailService.send(emailData);
+    console.log(`Email sent successfully: "${subject}" to ${to}`);
     return true;
   } catch (error) {
     console.error('SendGrid email error:', error);

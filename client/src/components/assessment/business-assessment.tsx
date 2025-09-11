@@ -222,7 +222,7 @@ export default function BusinessAssessment() {
       dataUsage: answers.data_usage,
       techInfrastructure: answers.tech_infrastructure,
       digitalProcesses: answers.digital_processes,
-      teamSkills: answers.team_skills,
+      teamSkills: answers.team_digital_skills,
       growthChallenges: answers.growth_challenges,
       score: Math.round(result.score),
       level: result.level,
@@ -237,6 +237,8 @@ export default function BusinessAssessment() {
     setAnswers({});
     setShowResults(false);
     setResult(null);
+    setShowContactForm(false);
+    setContactInfo({ name: "", email: "", company: "" });
   };
 
   const getScoreColor = (score: number) => {
