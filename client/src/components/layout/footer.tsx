@@ -10,11 +10,8 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-6">
               <Logo className="w-10 h-10" />
               <div>
-                <h3 className="text-xl font-bold">
-                  <span className="text-white tracking-wider">CAPLEO</span>
-                  <span className="text-secondary font-light ml-1">Sage Solutions</span>
-                </h3>
-                <p className="text-xs text-accent font-medium tracking-wide uppercase">Your Business, Our Guidance</p>
+                <h3 className="text-xl font-bold">CAPLEO Sage Solutions</h3>
+                <p className="text-sm text-gray-400">Your Business, Our Guidance</p>
               </div>
             </div>
             <p className="text-gray-400 mb-6">

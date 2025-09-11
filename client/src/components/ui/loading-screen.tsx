@@ -33,9 +33,9 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         
         {/* Company Name */}
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-white mb-2 tracking-wider">CAPLEO</h1>
-          <h2 className="text-2xl font-light text-accent mb-3">SAGE SOLUTIONS</h2>
-          <p className="text-sm text-accent font-medium tracking-wide uppercase">Your Business, Our Guidance</p>
+          <h1 className="text-4xl font-bold text-white mb-2">CAPLEO</h1>
+          <h2 className="text-2xl font-light text-white/90">SAGE SOLUTIONS</h2>
+          <p className="text-sm text-white/70 mt-2">Your Business, Our Guidance</p>
         </div>
         
         {/* Progress Bar */}
