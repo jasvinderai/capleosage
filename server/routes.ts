@@ -1,8 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertContactSchema } from "@shared/schema";
-import { sendEmail, createContactEmailHTML, createContactEmailText } from "./email";
+import { insertContactSchema, insertBookingSchema, insertAssessmentResultSchema } from "@shared/schema";
+import { sendEmail, createContactEmailHTML, createContactEmailText, createBookingEmailHTML, createBookingEmailText, createAssessmentEmailHTML, createAssessmentEmailText } from "./email";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -176,6 +176,161 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     } catch (error) {
       console.error("Error fetching case studies:", error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error"
+      });
+    }
+  });
+
+  // Booking submission endpoint
+  app.post("/api/bookings", async (req, res) => {
+    try {
+      // Validate request body using Zod schema
+      const validatedData = insertBookingSchema.parse(req.body);
+      
+      // Create booking using storage interface
+      const booking = await storage.createBooking(validatedData);
+      
+      // Send email notification to capleosage@outlook.com
+      try {
+        const emailData = {
+          name: booking.name,
+          email: booking.email,
+          company: booking.company,
+          role: booking.role,
+          businessType: booking.businessType,
+          consultationType: booking.consultationType,
+          duration: booking.duration,
+          selectedDate: booking.selectedDate,
+          selectedTimeSlot: booking.selectedTimeSlot,
+          challenges: JSON.parse(booking.challenges),
+          priority: booking.priority,
+          timeline: booking.timeline
+        };
+        
+        const emailSent = await sendEmail({
+          to: "capleosage@outlook.com",
+          from: "noreply@capleosage.com",
+          subject: `New Consultation Booking: ${booking.consultationType} - ${booking.name}`,
+          text: createBookingEmailText(emailData),
+          html: createBookingEmailHTML(emailData)
+        });
+        
+        if (!emailSent) {
+          console.warn("Failed to send booking email notification, but booking was saved");
+        }
+      } catch (emailError) {
+        console.error("Booking email sending failed:", emailError);
+      }
+      
+      res.status(201).json({
+        success: true,
+        message: "Consultation booked successfully",
+        data: booking
+      });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        res.status(400).json({
+          success: false,
+          message: "Validation error",
+          errors: error.errors
+        });
+      } else {
+        console.error("Booking submission error:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error"
+        });
+      }
+    }
+  });
+
+  // Assessment submission endpoint
+  app.post("/api/assessments", async (req, res) => {
+    try {
+      // Validate request body using Zod schema
+      const validatedData = insertAssessmentResultSchema.parse(req.body);
+      
+      // Create assessment result using storage interface
+      const result = await storage.createAssessmentResult(validatedData);
+      
+      // Optionally send email notification for high-value assessments
+      if (validatedData.email) {
+        try {
+          const emailData = {
+            name: validatedData.name || 'Anonymous',
+            email: validatedData.email,
+            company: validatedData.company || 'Not specified',
+            score: validatedData.score,
+            level: validatedData.level
+          };
+          
+          const emailSent = await sendEmail({
+            to: "capleosage@outlook.com",
+            from: "noreply@capleosage.com",
+            subject: `New Assessment Completed: ${emailData.level} (${emailData.score}%) - ${emailData.name}`,
+            text: createAssessmentEmailText(emailData),
+            html: createAssessmentEmailHTML(emailData)
+          });
+          
+          if (!emailSent) {
+            console.warn("Failed to send assessment email notification, but result was saved");
+          }
+        } catch (emailError) {
+          console.error("Assessment email sending failed:", emailError);
+        }
+      }
+      
+      res.status(201).json({
+        success: true,
+        message: "Assessment result saved successfully",
+        data: result
+      });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        res.status(400).json({
+          success: false,
+          message: "Validation error",
+          errors: error.errors
+        });
+      } else {
+        console.error("Assessment submission error:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error"
+        });
+      }
+    }
+  });
+
+  // Get all bookings (for admin purposes)
+  app.get("/api/bookings", async (req, res) => {
+    try {
+      const bookings = await storage.getBookings();
+      res.json({
+        success: true,
+        data: bookings
+      });
+    } catch (error) {
+      console.error("Error fetching bookings:", error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error"
+      });
+    }
+  });
+
+  // Get all assessment results (for admin purposes)
+  app.get("/api/assessments", async (req, res) => {
+    try {
+      const assessments = await storage.getAssessmentResults();
+      res.json({
+        success: true,
+        data: assessments
+      });
+    } catch (error) {
+      console.error("Error fetching assessments:", error);
       res.status(500).json({
         success: false,
         message: "Internal server error"

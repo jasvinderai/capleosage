@@ -10,6 +10,8 @@ import Home from "@/pages/home";
 import Services from "@/pages/services";
 import About from "@/pages/about";
 import CaseStudies from "@/pages/case-studies";
+import Assessment from "@/pages/assessment";
+import Booking from "@/pages/booking";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import Header from "@/components/layout/header";
@@ -35,6 +37,8 @@ function Router() {
           <Route path="/services" component={Services} />
           <Route path="/about" component={About} />
           <Route path="/case-studies" component={CaseStudies} />
+          <Route path="/assessment" component={Assessment} />
+          <Route path="/booking" component={Booking} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>

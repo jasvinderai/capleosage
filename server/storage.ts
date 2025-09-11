@@ -1,4 +1,4 @@
-import { type Contact, type InsertContact, type BlogPost, type InsertBlogPost, type Testimonial, type InsertTestimonial, type CaseStudy, type InsertCaseStudy } from "@shared/schema";
+import { type Contact, type InsertContact, type BlogPost, type InsertBlogPost, type Testimonial, type InsertTestimonial, type CaseStudy, type InsertCaseStudy, type Booking, type InsertBooking, type AssessmentResult, type InsertAssessmentResult } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -24,6 +24,16 @@ export interface IStorage {
   getCaseStudies(): Promise<CaseStudy[]>;
   getFeaturedCaseStudies(): Promise<CaseStudy[]>;
   createCaseStudy(caseStudy: InsertCaseStudy): Promise<CaseStudy>;
+
+  // Booking methods
+  getBooking(id: string): Promise<Booking | undefined>;
+  getBookings(): Promise<Booking[]>;
+  createBooking(booking: InsertBooking): Promise<Booking>;
+
+  // Assessment result methods
+  getAssessmentResult(id: string): Promise<AssessmentResult | undefined>;
+  getAssessmentResults(): Promise<AssessmentResult[]>;
+  createAssessmentResult(result: InsertAssessmentResult): Promise<AssessmentResult>;
 }
 
 export class MemStorage implements IStorage {
@@ -31,12 +41,16 @@ export class MemStorage implements IStorage {
   private blogPosts: Map<string, BlogPost>;
   private testimonials: Map<string, Testimonial>;
   private caseStudies: Map<string, CaseStudy>;
+  private bookings: Map<string, Booking>;
+  private assessmentResults: Map<string, AssessmentResult>;
 
   constructor() {
     this.contacts = new Map();
     this.blogPosts = new Map();
     this.testimonials = new Map();
     this.caseStudies = new Map();
+    this.bookings = new Map();
+    this.assessmentResults = new Map();
     
     // Initialize with some sample data
     this.initializeSampleData();
@@ -99,7 +113,10 @@ export class MemStorage implements IStorage {
   async createContact(insertContact: InsertContact): Promise<Contact> {
     const id = randomUUID();
     const contact: Contact = { 
-      ...insertContact, 
+      ...insertContact,
+      company: insertContact.company ?? null,
+      service: insertContact.service ?? null,
+      description: insertContact.description ?? null,
       id, 
       createdAt: new Date() 
     };
@@ -127,7 +144,10 @@ export class MemStorage implements IStorage {
   async createBlogPost(insertPost: InsertBlogPost): Promise<BlogPost> {
     const id = randomUUID();
     const post: BlogPost = { 
-      ...insertPost, 
+      ...insertPost,
+      imageUrl: insertPost.imageUrl ?? null,
+      published: insertPost.published ?? false,
+      publishedAt: insertPost.publishedAt ?? null,
       id, 
       createdAt: new Date(),
       updatedAt: new Date()
@@ -156,7 +176,9 @@ export class MemStorage implements IStorage {
   async createTestimonial(insertTestimonial: InsertTestimonial): Promise<Testimonial> {
     const id = randomUUID();
     const testimonial: Testimonial = { 
-      ...insertTestimonial, 
+      ...insertTestimonial,
+      imageUrl: insertTestimonial.imageUrl ?? null,
+      featured: insertTestimonial.featured ?? false,
       id, 
       createdAt: new Date() 
     };
@@ -184,12 +206,63 @@ export class MemStorage implements IStorage {
   async createCaseStudy(insertCaseStudy: InsertCaseStudy): Promise<CaseStudy> {
     const id = randomUUID();
     const caseStudy: CaseStudy = { 
-      ...insertCaseStudy, 
+      ...insertCaseStudy,
+      roi: insertCaseStudy.roi ?? null,
+      imageUrl: insertCaseStudy.imageUrl ?? null,
+      featured: insertCaseStudy.featured ?? false,
       id, 
       createdAt: new Date() 
     };
     this.caseStudies.set(id, caseStudy);
     return caseStudy;
+  }
+
+  // Booking methods
+  async getBooking(id: string): Promise<Booking | undefined> {
+    return this.bookings.get(id);
+  }
+
+  async getBookings(): Promise<Booking[]> {
+    return Array.from(this.bookings.values()).sort((a, b) => 
+      (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0)
+    );
+  }
+
+  async createBooking(insertBooking: InsertBooking): Promise<Booking> {
+    const id = randomUUID();
+    const booking: Booking = { 
+      ...insertBooking,
+      status: "confirmed",
+      id, 
+      createdAt: new Date() 
+    };
+    this.bookings.set(id, booking);
+    return booking;
+  }
+
+  // Assessment result methods
+  async getAssessmentResult(id: string): Promise<AssessmentResult | undefined> {
+    return this.assessmentResults.get(id);
+  }
+
+  async getAssessmentResults(): Promise<AssessmentResult[]> {
+    return Array.from(this.assessmentResults.values()).sort((a, b) => 
+      (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0)
+    );
+  }
+
+  async createAssessmentResult(insertResult: InsertAssessmentResult): Promise<AssessmentResult> {
+    const id = randomUUID();
+    const result: AssessmentResult = { 
+      ...insertResult,
+      name: insertResult.name ?? null,
+      email: insertResult.email ?? null,
+      company: insertResult.company ?? null,
+      id, 
+      createdAt: new Date() 
+    };
+    this.assessmentResults.set(id, result);
+    return result;
   }
 }
 

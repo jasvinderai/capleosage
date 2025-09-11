@@ -17,24 +17,30 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Link href="/contact">
+              <Link href="/assessment">
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4"
                   data-testid="hero-cta-primary"
                 >
-                  Book Free 30min Consultation
+                  Get Your Digital Readiness Score
                 </Button>
               </Link>
-              <Link href="/services">
+              <Link href="/booking">
                 <Button 
                   size="lg" 
                   className="bg-white hover:bg-gray-100 text-primary border-2 border-white px-8 py-4"
                   data-testid="hero-cta-secondary"
                 >
-                  Explore Services
+                  Smart Consultation Booking
                 </Button>
               </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8">
+              <p className="text-sm text-gray-100">
+                🎯 <strong>Free Assessment:</strong> 5-minute questionnaire reveals your transformation potential with personalized recommendations
+              </p>
             </div>
             
             <div className="flex items-center space-x-6 text-sm">
