@@ -29,8 +29,11 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2" data-testid="logo-link">
             <Logo className="w-10 h-10" />
             <div>
-              <h1 className="text-xl font-bold text-primary">CAPLEO Sage Solutions</h1>
-              <p className="text-sm text-muted-foreground">Your Business, Our Guidance</p>
+              <h1 className="text-xl font-bold">
+                <span className="text-[#1e40af] tracking-wider">CAPLEO</span>
+                <span className="text-secondary font-light ml-1">Sage Solutions</span>
+              </h1>
+              <p className="text-xs text-accent font-medium tracking-wide uppercase">Your Business, Our Guidance</p>
             </div>
           </Link>
           
