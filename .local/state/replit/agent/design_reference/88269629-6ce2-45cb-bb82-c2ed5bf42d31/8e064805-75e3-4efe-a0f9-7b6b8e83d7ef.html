@@ -1,0 +1,1067 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPLEO Sage Solutions | Data Engineering & Digital Transformation Consulting | Calgary</title>
+    <meta name="description" content="Calgary-based consulting firm specializing in Data Engineering, Digital Transformation Advisory, and Design Enhancement. Get your free assessment today.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                    },
+                    destructive: {
+                        DEFAULT: "var(--destructive)",
+                        foreground: "var(--destructive-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                },
+                fontFamily: {
+                    sans: ["Inter", "system-ui", "sans-serif"],
+                }
+            },
+        }
+    };
+    </script>
+    
+    <style>
+        :root {
+            --background: hsl(210 40% 98%);
+            --foreground: hsl(210 40% 20%);
+            --card: hsl(0 0% 100%);
+            --card-foreground: hsl(210 40% 20%);
+            --primary: hsl(210 50% 30%); /* Dark Blue */
+            --primary-foreground: hsl(0 0% 100%);
+            --secondary: hsl(178 68% 55%); /* Teal */
+            --secondary-foreground: hsl(210 40% 20%);
+            --muted: hsl(210 40% 96%);
+            --muted-foreground: hsl(210 40% 45%);
+            --accent: hsl(48 89% 70%); /* Light Yellow */
+            --accent-foreground: hsl(210 40% 20%);
+            --destructive: hsl(0 84% 60%);
+            --destructive-foreground: hsl(0 0% 100%);
+            --border: hsl(210 40% 90%);
+            --input: hsl(210 40% 96%);
+            --ring: hsl(210 50% 30%);
+            --radius: 0.5rem;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            transition: transform 0.3s ease;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-background text-foreground font-sans">
+    <!-- @COMPONENT: Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-primary-foreground font-bold text-lg">CS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-primary">CAPLEO Sage Solutions</h1>
+                        <p class="text-sm text-muted-foreground">Calgary Consulting Excellence</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="#services" class="text-foreground hover:text-primary transition-colors">Services</a>
+                    <a href="#framework" class="text-foreground hover:text-primary transition-colors">Framework</a>
+                    <a href="#about" class="text-foreground hover:text-primary transition-colors">About</a>
+                    <a href="#case-studies" class="text-foreground hover:text-primary transition-colors">Case Studies</a>
+                    <a href="#blog" class="text-foreground hover:text-primary transition-colors">Insights</a>
+                    <a href="#contact" class="text-foreground hover:text-primary transition-colors">Contact</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="#contact" class="bg-accent text-accent-foreground px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors">
+                        Free Assessment
+                    </a>
+                    <button class="lg:hidden text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="hero-gradient py-20 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Transform Your Business with 
+                        <span class="text-accent">Data-Driven Excellence</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Calgary's premier consulting firm delivering measurable results through Data Engineering, Digital Transformation, and Design Enhancement.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#contact" class="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-center hover:bg-opacity-90 transition-colors">
+                            Get Free Assessment
+                        </a>
+                        <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-white hover:text-primary transition-colors">
+                            Explore Services
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-accent"></i>
+                            <span>Based in Calgary, AB</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-clock text-accent"></i>
+                            <span>1-2 Week Quick Start</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- Modern consulting office with professionals working on data analytics -->
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern consulting team analyzing data" 
+                         class="rounded-xl shadow-2xl w-full h-auto" />
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-primary">
+                                <div class="text-2xl font-bold">150+</div>
+                                <div class="text-sm">Projects Delivered</div>
+                            </div>
+                            <div class="text-secondary">
+                                <div class="text-2xl font-bold">98%</div>
+                                <div class="text-sm">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Core Services Section -->
+    <section id="services" class="py-20 bg-muted">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary">Our Core Services</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Integrated consulting solutions designed to accelerate your digital transformation journey and drive measurable business outcomes.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Data Engineering & Analytics -->
+                <div class="service-card bg-card p-8 rounded-xl shadow-lg">
+                    <div class="text-secondary text-4xl mb-6">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Data Engineering & Analytics</h3>
+                    <p class="text-muted-foreground mb-6">
+                        Transform raw data into strategic insights with robust data pipelines, governance frameworks, and advanced analytics solutions.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Data maturity & readiness assessment</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Analytics & BI delivery (Power BI, Tableau, Looker)</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>ETL/ELT pipeline implementation</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Data governance program</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full bg-secondary text-secondary-foreground py-3 rounded-lg text-center font-medium hover:bg-opacity-90 transition-colors">
+                        Start Data Assessment
+                    </a>
+                </div>
+                
+                <!-- Digital Transformation Advisory -->
+                <div class="service-card bg-card p-8 rounded-xl shadow-lg">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Digital Transformation Advisory</h3>
+                    <p class="text-muted-foreground mb-6">
+                        Navigate complex digital initiatives with strategic roadmaps, technology selection, and change management expertise.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Digital maturity assessment & DX roadmap</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>ERP/CRM vendor selection advisory</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Change management & adoption programs</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>AI & Automation readiness</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full bg-primary text-primary-foreground py-3 rounded-lg text-center font-medium hover:bg-opacity-90 transition-colors">
+                        Book DX Consultation
+                    </a>
+                </div>
+                
+                <!-- Design Transformation & Enhancement -->
+                <div class="service-card bg-card p-8 rounded-xl shadow-lg">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Design Transformation & Enhancement</h3>
+                    <p class="text-muted-foreground mb-6">
+                        Elevate your brand presence and user experience through strategic design thinking and comprehensive brand enhancement.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Digital presence audit & optimization</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Brand identity refresh & guidelines</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Service design & journey mapping</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Marketing materials design</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full bg-accent text-accent-foreground py-3 rounded-lg text-center font-medium hover:bg-opacity-90 transition-colors">
+                        Request Design Audit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Core Services Section -->
+
+    <!-- @COMPONENT: Service Delivery Framework -->
+    <section id="framework" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary">Our Proven 3-Stage Framework</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    A systematic approach that ensures successful project outcomes through discovery, pilot implementation, and scalable solutions.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Stage 1: Discovery & Diagnostic -->
+                <div class="bg-card p-8 rounded-xl shadow-lg border-l-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center font-bold text-xl mr-4">1</div>
+                        <h3 class="text-2xl font-bold text-primary">Discovery & Diagnostic</h3>
+                    </div>
+                    
+                    <p class="text-muted-foreground mb-6">
+                        Comprehensive assessment to understand current state, identify opportunities, and define strategic roadmap.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Key Activities:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Current state assessment</li>
+                                <li>• Stakeholder interviews</li>
+                                <li>• Gap analysis & opportunity mapping</li>
+                                <li>• Strategic roadmap development</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Timeline:</h4>
+                            <p class="text-sm text-muted-foreground">1-3 weeks</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Deliverable:</h4>
+                            <p class="text-sm text-muted-foreground">Comprehensive assessment report with actionable recommendations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stage 2: Pilot & Enable -->
+                <div class="bg-card p-8 rounded-xl shadow-lg border-l-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-xl mr-4">2</div>
+                        <h3 class="text-2xl font-bold text-primary">Pilot & Enable</h3>
+                    </div>
+                    
+                    <p class="text-muted-foreground mb-6">
+                        Implement proof-of-concept solutions, validate approaches, and build foundational capabilities.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Key Activities:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Pilot implementation</li>
+                                <li>• Team training & enablement</li>
+                                <li>• Process documentation</li>
+                                <li>• Performance measurement</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Timeline:</h4>
+                            <p class="text-sm text-muted-foreground">4-8 weeks</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Deliverable:</h4>
+                            <p class="text-sm text-muted-foreground">Working pilot solution with success metrics and scaling plan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stage 3: Scale & Sustain -->
+                <div class="bg-card p-8 rounded-xl shadow-lg border-l-4 border-accent">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-xl mr-4">3</div>
+                        <h3 class="text-2xl font-bold text-primary">Scale & Sustain</h3>
+                    </div>
+                    
+                    <p class="text-muted-foreground mb-6">
+                        Full-scale implementation with governance frameworks to ensure long-term success and continuous improvement.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Key Activities:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Enterprise-wide rollout</li>
+                                <li>• Governance establishment</li>
+                                <li>• Continuous improvement setup</li>
+                                <li>• Success measurement & optimization</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Timeline:</h4>
+                            <p class="text-sm text-muted-foreground">12-24 weeks</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Deliverable:</h4>
+                            <p class="text-sm text-muted-foreground">Production-ready solution with ongoing support framework</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Service Delivery Framework -->
+
+    <!-- @COMPONENT: Client Testimonials -->
+    <section class="py-20 bg-muted">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary">What Our Clients Say</h2>
+                <p class="text-xl text-muted-foreground">Proven results across industries in Calgary and beyond</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-card p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground mb-6 italic">
+                        "CAPLEO transformed our data architecture and delivered insights that increased our operational efficiency by 35%. Their Calgary team understood our local market needs perfectly."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional headshot of a satisfied client -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&h=60" 
+                             alt="Client testimonial photo" 
+                             class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-foreground">Michael Chen</div>
+                            <div class="text-sm text-muted-foreground">COO, Alberta Energy Corp</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground mb-6 italic">
+                        "The digital transformation roadmap they created saved us 6 months and $2M in implementation costs. Outstanding strategic thinking and execution."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional headshot of a satisfied client -->
+                        <img src="https://pixabay.com/get/gd63c2d174f54f163b19f6764956d001532148f2a55b83b6f252164e870cf42682f0271ede54699c5d20692a7321ebd5d327166be173ea934d86f0a41348a89a1_1280.jpg" 
+                             alt="Client testimonial photo" 
+                             class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-foreground">Sarah Williams</div>
+                            <div class="text-sm text-muted-foreground">CTO, FinTech Solutions</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground mb-6 italic">
+                        "Their brand transformation work doubled our lead generation within 3 months. The team's design expertise is world-class with local market insight."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional headshot of a satisfied client -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&h=60" 
+                             alt="Client testimonial photo" 
+                             class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-foreground">David Rodriguez</div>
+                            <div class="text-sm text-muted-foreground">VP Marketing, Calgary Retail Group</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Client Testimonials -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-primary">About CAPLEO Sage Solutions</h2>
+                    <p class="text-lg text-muted-foreground mb-6">
+                        Based in Calgary, Alberta, CAPLEO Sage Solutions is a premier consulting firm that combines deep technical expertise with strategic business acumen to deliver transformational outcomes for our clients.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-secondary mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-foreground">Calgary-Based Expertise</h4>
+                                <p class="text-muted-foreground">Deep understanding of Western Canadian business landscape and regulatory environment.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-secondary mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-foreground">Proven Methodologies</h4>
+                                <p class="text-muted-foreground">Structured 3-stage approach that minimizes risk and maximizes value delivery.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-secondary mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-foreground">Measurable Results</h4>
+                                <p class="text-muted-foreground">Track record of delivering 20-50% efficiency improvements and ROI within 12 months.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-primary">150+</div>
+                            <div class="text-sm text-muted-foreground">Projects Completed</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-secondary">8+</div>
+                            <div class="text-sm text-muted-foreground">Years Experience</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-accent">50+</div>
+                            <div class="text-sm text-muted-foreground">Calgary Clients</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <!-- Founding team member photos -->
+                    <div class="text-center">
+                        <!-- Professional photo of founding team member -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
+                             alt="Founding team member" 
+                             class="w-full h-48 object-cover rounded-xl mb-4" />
+                        <h4 class="font-semibold text-foreground">Alex Thompson</h4>
+                        <p class="text-sm text-muted-foreground">Co-Founder & CEO</p>
+                        <p class="text-xs text-muted-foreground mt-1">15+ years in data engineering</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <!-- Professional photo of founding team member -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
+                             alt="Founding team member" 
+                             class="w-full h-48 object-cover rounded-xl mb-4" />
+                        <h4 class="font-semibold text-foreground">Jamie Park</h4>
+                        <p class="text-sm text-muted-foreground">Co-Founder & CTO</p>
+                        <p class="text-xs text-muted-foreground mt-1">12+ years in digital transformation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Case Studies -->
+    <section id="case-studies" class="py-20 bg-muted">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary">Success Stories</h2>
+                <p class="text-xl text-muted-foreground">Real results from Calgary businesses across industries</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Case Study 1: Data Engineering -->
+                <div class="bg-card p-6 rounded-xl shadow-lg">
+                    <!-- Data visualization dashboard -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300" 
+                         alt="Data analytics dashboard showing business metrics" 
+                         class="w-full h-48 object-cover rounded-lg mb-4" />
+                    
+                    <div class="flex items-center mb-3">
+                        <span class="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">Data Engineering</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-primary">Calgary Energy Firm: 40% Efficiency Gain</h3>
+                    <p class="text-muted-foreground mb-4">
+                        Implemented real-time data pipeline processing 2TB+ daily operations data, enabling predictive maintenance and reducing downtime.
+                    </p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-muted-foreground">Timeline:</span>
+                            <span class="font-medium">12 weeks</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-muted-foreground">ROI:</span>
+                            <span class="font-medium text-secondary">320%</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                
+                <!-- Case Study 2: Digital Transformation -->
+                <div class="bg-card p-6 rounded-xl shadow-lg">
+                    <!-- Modern office with digital transformation -->
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300" 
+                         alt="Modern office setup showing digital transformation" 
+                         class="w-full h-48 object-cover rounded-lg mb-4" />
+                    
+                    <div class="flex items-center mb-3">
+                        <span class="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Digital Transformation</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-primary">FinTech Startup: Scalable Architecture</h3>
+                    <p class="text-muted-foreground mb-4">
+                        Designed cloud-native architecture supporting 10x user growth, integrated payment systems, and automated compliance reporting.
+                    </p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-muted-foreground">Timeline:</span>
+                            <span class="font-medium">16 weeks</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-muted-foreground">Growth:</span>
+                            <span class="font-medium text-secondary">1000%</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                
+                <!-- Case Study 3: Design Transformation -->
+                <div class="bg-card p-6 rounded-xl shadow-lg">
+                    <!-- Brand design and marketing materials -->
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300" 
+                         alt="Creative brand design and marketing materials layout" 
+                         class="w-full h-48 object-cover rounded-lg mb-4" />
+                    
+                    <div class="flex items-center mb-3">
+                        <span class="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">Design Transformation</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-primary">Retail Chain: Brand Revitalization</h3>
+                    <p class="text-muted-foreground mb-4">
+                        Complete brand refresh including digital presence, in-store experience, and customer journey optimization across 25 locations.
+                    </p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-muted-foreground">Timeline:</span>
+                            <span class="font-medium">20 weeks</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-muted-foreground">Lead Increase:</span>
+                            <span class="font-medium text-secondary">180%</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Case Studies -->
+
+    <!-- @COMPONENT: Blog/Insights Section -->
+    <section id="blog" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary">Latest Insights</h2>
+                <p class="text-xl text-muted-foreground">Expert perspectives on data, digital transformation, and design trends</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <article class="bg-card rounded-xl shadow-lg overflow-hidden">
+                    <!-- Technology and data analytics concept -->
+                    <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=250" 
+                         alt="Advanced data analytics and AI technology visualization" 
+                         class="w-full h-48 object-cover" />
+                    
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">Data Engineering</span>
+                            <span class="text-sm text-muted-foreground ml-3">5 min read</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-3 text-primary">Building Scalable Data Pipelines in 2024</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Modern approaches to data architecture that support real-time analytics and machine learning workflows for Calgary businesses.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">Dec 15, 2023</span>
+                            <a href="#" class="text-primary font-medium hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="bg-card rounded-xl shadow-lg overflow-hidden">
+                    <!-- Digital transformation in business -->
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=250" 
+                         alt="Business team collaborating with digital tools and technology" 
+                         class="w-full h-48 object-cover" />
+                    
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Digital Transformation</span>
+                            <span class="text-sm text-muted-foreground ml-3">7 min read</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-3 text-primary">AI Adoption Strategies for Canadian SMBs</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Practical framework for small and medium businesses to integrate AI technologies while managing costs and complexity.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">Dec 10, 2023</span>
+                            <a href="#" class="text-primary font-medium hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="bg-card rounded-xl shadow-lg overflow-hidden">
+                    <!-- Brand design and user experience -->
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=250" 
+                         alt="Creative design workspace with brand materials and sketches" 
+                         class="w-full h-48 object-cover" />
+                    
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">Design Strategy</span>
+                            <span class="text-sm text-muted-foreground ml-3">6 min read</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-3 text-primary">UX Design Trends Driving Conversions</h3>
+                        <p class="text-muted-foreground mb-4">
+                            How modern design principles and user experience optimization can significantly impact business outcomes and customer satisfaction.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">Dec 8, 2023</span>
+                            <a href="#" class="text-primary font-medium hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors">
+                    View All Insights
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Blog/Insights Section -->
+
+    <!-- @COMPONENT: Contact & CTA Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Get started with a free assessment and discover how CAPLEO can accelerate your success.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
+                                <i class="fas fa-clock text-secondary-foreground"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Quick Start</h4>
+                                <p class="text-gray-100">Free assessment delivered within 1-2 weeks</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                                <i class="fas fa-chart-line text-accent-foreground"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Proven ROI</h4>
+                                <p class="text-gray-100">Average 20-50% efficiency improvements</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Local Expertise</h4>
+                                <p class="text-gray-100">Calgary-based team with deep market knowledge</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-accent"></i>
+                            <span>+1 (403) 555-0123</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-accent"></i>
+                            <span>hello@capleosage.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-accent"></i>
+                            <span>Calgary, Alberta, Canada</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Get Your Free Assessment</h3>
+                    
+                    <form class="space-y-6" data-implementation="Should integrate with lead tracking and CRM">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Full Name *</label>
+                            <input type="text" data-bind="form.name" placeholder="Enter your full name" 
+                                   class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Email Address *</label>
+                            <input type="email" data-bind="form.email" placeholder="Enter your email" 
+                                   class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Company</label>
+                            <input type="text" data-bind="form.company" placeholder="Your company name" 
+                                   class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Service Interest</label>
+                            <select data-bind="form.service" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="data-engineering">Data Engineering & Analytics</option>
+                                <option value="digital-transformation">Digital Transformation Advisory</option>
+                                <option value="design-transformation">Design Transformation & Enhancement</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Project Description</label>
+                            <textarea data-bind="form.description" rows="4" placeholder="Tell us about your project or challenge..." 
+                                      class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" data-event="click:handleFormSubmit" 
+                                class="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Get Free Assessment
+                        </button>
+                        
+                        <p class="text-sm text-muted-foreground text-center">
+                            We'll respond within 24 hours with your assessment plan.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact & CTA Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+                            <span class="text-secondary-foreground font-bold text-lg">CS</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">CAPLEO Sage Solutions</h3>
+                            <p class="text-sm text-gray-400">Calgary Consulting Excellence</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Transforming Calgary businesses through data-driven insights, digital innovation, and strategic design.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Data Engineering</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Digital Transformation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Design Enhancement</a></li>
+                        <li><a href="#framework" class="text-gray-400 hover:text-white transition-colors">Service Framework</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#case-studies" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog & Insights</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-accent"></i>
+                            <span>+1 (403) 555-0123</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-accent"></i>
+                            <span>hello@capleosage.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-accent"></i>
+                            <span>Calgary, AB, Canada</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6">
+                        <h5 class="font-medium text-white mb-3">Download Resources</h5>
+                        <a href="#" class="block bg-accent text-accent-foreground px-4 py-2 rounded text-center font-medium hover:bg-opacity-90 transition-colors">
+                            Digital Transformation Guide
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 CAPLEO Sage Solutions. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <!-- @FUNCTIONALITY: Include Google Business Profile schema markup and local SEO structured data -->
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement smooth scrolling navigation
+        (function() {
+            // Mobile menu toggle functionality
+            const mobileMenuButton = document.querySelector('.lg\\:hidden button');
+            const navigation = document.querySelector('nav');
+            
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Form submission handling
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form validation and submission
+                    // TODO: Integrate with CRM and lead tracking
+                    console.log('Form submitted - integrate with backend');
+                    alert('Thank you for your interest! We\'ll contact you within 24 hours.');
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "CAPLEO Sage Solutions",
+        "description": "Calgary-based consulting firm specializing in Data Engineering, Digital Transformation Advisory, and Design Enhancement",
+        "url": "https://capleosage.com",
+        "telephone": "+1-403-555-0123",
+        "email": "hello@capleosage.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Calgary",
+            "addressRegion": "AB",
+            "addressCountry": "CA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "51.0447",
+            "longitude": "-114.0719"
+        },
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.0447",
+                "longitude": "-114.0719"
+            },
+            "geoRadius": "100000"
+        },
+        "services": [
+            "Data Engineering",
+            "Digital Transformation Advisory",
+            "Design Transformation & Enhancement"
+        ]
+    }
+    </script>
+</body>
+</html>
