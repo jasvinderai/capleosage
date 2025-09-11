@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import Hero from "@/components/sections/hero";
 import ServicesOverview from "@/components/sections/services-overview";
 import Framework from "@/components/sections/framework";
-import Testimonials from "@/components/sections/testimonials";
+import WhyChooseUs from "@/components/sections/testimonials";
 import Team from "@/components/sections/team";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
         <ServicesOverview />
         <Framework />
-        <Testimonials />
+        <WhyChooseUs />
         <Team />
       </div>
     </>
