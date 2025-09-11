@@ -45,8 +45,8 @@ export function createContactEmailHTML(contact: {
   name: string;
   email: string;
   phone?: string;
-  company?: string;
-  service: string;
+  company?: string | null;
+  service: string | null;
   message: string;
 }): string {
   return `
@@ -59,7 +59,7 @@ export function createContactEmailHTML(contact: {
         <p><strong>Email:</strong> ${contact.email}</p>
         ${contact.phone ? `<p><strong>Phone:</strong> ${contact.phone}</p>` : ''}
         ${contact.company ? `<p><strong>Company:</strong> ${contact.company}</p>` : ''}
-        <p><strong>Service Interest:</strong> ${contact.service}</p>
+        <p><strong>Service Interest:</strong> ${contact.service || 'Not specified'}</p>
       </div>
       
       <div style="background-color: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
@@ -81,8 +81,8 @@ export function createContactEmailText(contact: {
   name: string;
   email: string;
   phone?: string;
-  company?: string;
-  service: string;
+  company?: string | null;
+  service: string | null;
   message: string;
 }): string {
   return `
@@ -93,7 +93,7 @@ Name: ${contact.name}
 Email: ${contact.email}
 ${contact.phone ? `Phone: ${contact.phone}` : ''}
 ${contact.company ? `Company: ${contact.company}` : ''}
-Service Interest: ${contact.service}
+Service Interest: ${contact.service || 'Not specified'}
 
 Message:
 ${contact.message}

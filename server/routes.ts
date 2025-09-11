@@ -17,12 +17,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Send email notification to capleosage@outlook.com
       try {
+        const emailData = {
+          name: contact.name,
+          email: contact.email,
+          phone: undefined, // Phone field not in current schema
+          company: contact.company,
+          service: contact.service,
+          message: contact.description || 'No message provided'
+        };
+        
         const emailSent = await sendEmail({
           to: "capleosage@outlook.com",
           from: "noreply@capleosage.com", // This will need to be verified with SendGrid
           subject: `New Contact Form Submission from ${contact.name}`,
-          text: createContactEmailText(contact),
-          html: createContactEmailHTML(contact)
+          text: createContactEmailText(emailData),
+          html: createContactEmailHTML(emailData)
         });
         
         if (!emailSent) {
