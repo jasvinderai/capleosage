@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Logo } from "@/components/ui/logo";
 import { Menu } from "lucide-react";
 
 export default function Header() {
@@ -26,12 +27,10 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-2" data-testid="logo-link">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">CS</span>
-            </div>
+            <Logo className="w-10 h-10" />
             <div>
               <h1 className="text-xl font-bold text-primary">CAPLEO Sage Solutions</h1>
-              <p className="text-sm text-muted-foreground">Calgary Consulting Excellence</p>
+              <p className="text-sm text-muted-foreground">Your Business, Our Guidance</p>
             </div>
           </Link>
           

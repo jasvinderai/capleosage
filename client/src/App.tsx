@@ -1,9 +1,11 @@
+import { useState, useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Helmet } from "react-helmet";
+import { LoadingScreen } from "@/components/ui/loading-screen";
 import Home from "@/pages/home";
 import Services from "@/pages/services";
 import About from "@/pages/about";
@@ -14,6 +16,16 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
 function Router() {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
+
+  if (loading) {
+    return <LoadingScreen onComplete={handleLoadingComplete} />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -39,7 +51,7 @@ function App() {
         <Helmet>
           <title>CAPLEO Sage Solutions | Data Engineering & Digital Transformation Consulting | Calgary</title>
           <meta name="description" content="Calgary-based consulting firm specializing in Data Engineering, Digital Transformation Advisory, and Design Enhancement. Get your free assessment today." />
-          <meta property="og:title" content="CAPLEO Sage Solutions | Calgary Consulting Excellence" />
+          <meta property="og:title" content="CAPLEO Sage Solutions | Your Business, Our Guidance" />
           <meta property="og:description" content="Transform your business with data-driven insights, digital innovation, and strategic design. Calgary's premier consulting firm." />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://capleosage.com" />
