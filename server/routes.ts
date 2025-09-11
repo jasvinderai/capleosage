@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
+import { sendEmail, createContactEmailHTML, createContactEmailText } from "./email";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -13,6 +14,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Create contact using storage interface
       const contact = await storage.createContact(validatedData);
+      
+      // Send email notification to capleosage@outlook.com
+      try {
+        const emailSent = await sendEmail({
+          to: "capleosage@outlook.com",
+          from: "noreply@capleosage.com", // This will need to be verified with SendGrid
+          subject: `New Contact Form Submission from ${contact.name}`,
+          text: createContactEmailText(contact),
+          html: createContactEmailHTML(contact)
+        });
+        
+        if (!emailSent) {
+          console.warn("Failed to send email notification, but contact was saved");
+        }
+      } catch (emailError) {
+        console.error("Email sending failed:", emailError);
+        // Continue with success response even if email fails
+      }
       
       res.status(201).json({
         success: true,
