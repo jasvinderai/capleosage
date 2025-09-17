@@ -53,7 +53,7 @@ export default function Services() {
     },
     {
       icon: Palette,
-      title: "Design Transformation & Enhancement",
+      title: "Design Enhancement",
       description: "Elevate your brand presence and user experience through strategic design thinking and comprehensive brand enhancement.",
       category: "Design & Brand",
       duration: "3-12 weeks",

@@ -5,23 +5,23 @@ import { CheckCircle } from "lucide-react";
 export default function About() {
   const teamMembers = [
     {
-      name: "Alex Thompson",
+      name: "Jasvinder Sethi",
       position: "Co-Founder & CEO",
-      experience: "15+ years in data engineering",
+      experience: "10+ years in data engineering",
       bio: "Former senior data architect at major Calgary energy companies. Specialized in building scalable data platforms that drive business insights.",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
     },
     {
-      name: "Jamie Park",
+      name: "Geetika Kour",
       position: "Co-Founder & CTO",
-      experience: "12+ years in digital transformation",
+      experience: "7+ years in digital transformation",
       bio: "Digital transformation specialist with extensive experience in ERP implementations and change management across various industries.",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
     },
     {
-      name: "Morgan Chen",
-      position: "Co-Founder & Chief Design Officer",
-      experience: "10+ years in design strategy",
+      name: "Seerath Sethi",
+      position: "Chief Design Officer",
+      experience: "5+ years in design strategy",
       bio: "Award-winning design strategist with expertise in brand transformation and user experience optimization for enterprise clients.",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
     }
@@ -47,11 +47,12 @@ export default function About() {
   ];
 
   const stats = [
-    { number: "150+", label: "Projects Completed", description: "Across various industries" },
+    { number: "15+", label: "Projects Completed", description: "Across various industries" },
     { number: "8+", label: "Years Experience", description: "In Calgary market" },
     { number: "50+", label: "Calgary Clients", description: "From startups to enterprises" },
-    { number: "98%", label: "Client Satisfaction", description: "Based on project completion surveys" }
+    { number: "100%", label: "Commitment to Results  ", description: "Based on project completion surveys" }
   ];
+
 
   return (
     <>

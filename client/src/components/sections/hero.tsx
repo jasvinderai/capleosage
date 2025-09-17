@@ -9,11 +9,11 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight" data-testid="hero-title">
-              Transform Your Business with 
-              <span className="text-accent"> Data-Driven Excellence</span>
+              Reimagine Your Business with
+              <span className="text-accent"> Data, Design, and Digital Strategy</span>
             </h1>
             <p className="text-xl mb-8 text-gray-100" data-testid="hero-description">
-              Calgary's premier consulting firm delivering measurable results through Data Engineering, Digital Transformation, and Design Enhancement.
+              Quick wins, Real results—Calgary consulting for data and digital transformation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -63,7 +63,7 @@ export default function Hero() {
               data-testid="hero-image"
             />
             
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg" data-testid="hero-stats">
+            {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg" data-testid="hero-stats">
               <div className="flex items-center space-x-4">
                 <div className="text-primary">
                   <div className="text-2xl font-bold">150+</div>
@@ -74,7 +74,7 @@ export default function Hero() {
                   <div className="text-sm">Client Satisfaction</div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

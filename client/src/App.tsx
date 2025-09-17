@@ -91,7 +91,7 @@ function App() {
               "services": [
                 "Data Engineering",
                 "Digital Transformation Advisory",
-                "Design Transformation & Enhancement"
+                "Design Enhancement"
               ]
             }`}
           </script>

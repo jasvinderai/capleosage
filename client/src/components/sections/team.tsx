@@ -3,21 +3,21 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Team() {
   const teamMembers = [
     {
-      name: "Alex Thompson",
+      name: "Jasvinder Sethi",
       position: "Co-Founder & CEO",
-      experience: "15+ years in data engineering",
+      experience: "10+ years in data engineering",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
     },
     {
-      name: "Jamie Park",
+      name: "Geetika Kour",
       position: "Co-Founder & CTO",
-      experience: "12+ years in digital transformation",
+      experience: "7+ years in digital transformation",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
     },
     {
-      name: "Morgan Chen",
-      position: "Co-Founder & Chief Design Officer",
-      experience: "10+ years in design strategy",
+      name: "Seerath Sethi",
+      position: "Chief Design Officer",
+      experience: "5+ years in design strategy",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
     }
   ];
