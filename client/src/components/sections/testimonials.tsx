@@ -6,7 +6,7 @@ export default function WhyChooseUs() {
     {
       icon: <Users className="h-8 w-8 text-accent" />,
       title: "Proven Expertise",
-      description: "Our founders bring 15+ years of experience from major Calgary energy companies, fintech, and award-winning design agencies."
+      description: "Our founders bring 15+ years of experience from major Energy Companies, Fintech, Retail, Consulting and award-winning design agencies."
     },
     {
       icon: <Target className="h-8 w-8 text-accent" />,
@@ -20,8 +20,8 @@ export default function WhyChooseUs() {
     },
     {
       icon: <MapPin className="h-8 w-8 text-accent" />,
-      title: "Local Calgary Knowledge",
-      description: "Deep understanding of Alberta's business landscape, regulations, and market dynamics across energy, tech, and retail sectors."
+      title: "Local Knowledge",
+      description: "Deep understanding of Canadian business landscape, regulations, and market dynamics across energy, tech, and retail sectors."
     },
     {
       icon: <Award className="h-8 w-8 text-accent" />,

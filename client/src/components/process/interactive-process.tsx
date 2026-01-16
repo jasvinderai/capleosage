@@ -30,7 +30,12 @@ const processPhases: ProcessPhase[] = [
   {
     id: "discovery",
     title: "Discovery & Assessment",
-    icon: <Search className="h-8 w-8" />,
+    // icon: <Search className="h-8 w-8" />,
+    icon: (
+  <div className="bg-blue-600 rounded-full p-3 ring-4 ring-blue-100">
+    <Search className="h-5 w-5 text-white" />
+  </div>
+),
     duration: "1-2 weeks",
     description: "Deep dive into your current state, challenges, and opportunities",
     activities: [
@@ -50,7 +55,12 @@ const processPhases: ProcessPhase[] = [
   {
     id: "strategy",
     title: "Strategy & Planning",
-    icon: <Target className="h-8 w-8" />,
+    // icon: <Target className="h-8 w-8" />,
+    icon: (
+  <div className="bg-blue-600 rounded-full p-3 ring-4 ring-blue-100">
+    <Target className="h-5 w-5 text-white" />
+  </div>
+),
     duration: "2-3 weeks",
     description: "Develop a tailored transformation strategy aligned with your business goals",
     activities: [
@@ -71,7 +81,12 @@ const processPhases: ProcessPhase[] = [
   {
     id: "implementation",
     title: "Implementation & Build",
-    icon: <Cog className="h-8 w-8" />,
+    // icon: <Cog className="h-8 w-8" />,
+    icon: (
+  <div className="bg-blue-600 rounded-full p-3 ring-4 ring-blue-100">
+    <Cog className="h-5 w-5 text-white" />
+  </div>
+),
     duration: "4-12 weeks",
     description: "Execute the transformation with agile methodology and continuous feedback",
     activities: [
@@ -92,7 +107,12 @@ const processPhases: ProcessPhase[] = [
   {
     id: "optimization",
     title: "Optimization & Growth",
-    icon: <TrendingUp className="h-8 w-8" />,
+    // icon: <TrendingUp className="h-8 w-8" />,
+    icon: (
+  <div className="bg-blue-600 rounded-full p-3 ring-4 ring-blue-100">
+    <TrendingUp className="h-5 w-5 text-white" />
+  </div>
+),
     duration: "Ongoing",
     description: "Monitor, measure, and continuously improve for sustained success",
     activities: [

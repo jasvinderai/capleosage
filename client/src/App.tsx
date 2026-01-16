@@ -67,7 +67,7 @@ function App() {
               "description": "Calgary-based consulting firm specializing in Data Engineering, Digital Transformation Advisory, and Design Enhancement",
               "url": "https://capleosage.com",
               "telephone": "+1-403-555-0123",
-              "email": "hello@capleosage.com",
+              "email": "capleosage@outlook.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Calgary",

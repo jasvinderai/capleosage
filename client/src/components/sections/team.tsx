@@ -4,28 +4,28 @@ export default function Team() {
   const teamMembers = [
     {
       name: "Jasvinder Sethi",
-      position: "Co-Founder & CEO",
+      position: "Staff Data Consultant",
       experience: "10+ years in data engineering",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
     },
     {
       name: "Geetika Kour",
-      position: "Co-Founder & CTO",
+      position: "Staff Digital Transformation Consultant",
       experience: "7+ years in digital transformation",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
     },
     {
-      name: "Seerath Sethi",
+      name: "Seerath ",
       position: "Chief Design Officer",
       experience: "5+ years in design strategy",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
     }
   ];
 
   const stats = [
-    { number: "150+", label: "Projects Completed" },
-    { number: "8+", label: "Years Experience" },
-    { number: "50+", label: "Calgary Clients" }
+    { number: "15+", label: "Projects Completed" },
+    { number: "10+",label: "Years Experience" },
+    { number: "10+", label: " Clients" }
   ];
 
   return (
@@ -44,7 +44,7 @@ export default function Team() {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <div>
-                  <h4 className="font-semibold text-foreground">Calgary-Based Expertise</h4>
+                  <h4 className="font-semibold text-foreground">Canada-Wide Expertise</h4>
                   <p className="text-muted-foreground">Deep understanding of Western Canadian business landscape and regulatory environment.</p>
                 </div>
               </div>

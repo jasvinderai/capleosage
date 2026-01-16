@@ -67,11 +67,11 @@ export default function Contact() {
               <div className="space-y-4" data-testid="contact-info">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-accent" />
-                  <span>+1 (403) 555-0123</span>
+                  <span>+1 (825) 883-2507</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-accent" />
-                  <span>hello@capleosage.com</span>
+                  <span>capleosage@outlook.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-accent" />
@@ -116,15 +116,15 @@ export default function Contact() {
                     <div className="space-y-2 text-muted-foreground">
                       <div className="flex items-center space-x-3">
                         <MapPin className="h-5 w-5 text-accent" />
-                        <span>Downtown Calgary, AB</span>
+                        <span>50 Corner Meadows Manor NE, Calgary, AB</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <Phone className="h-5 w-5 text-accent" />
-                        <span>+1 (403) 555-0123</span>
+                        <span>+1 (825) 883-2507</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <Mail className="h-5 w-5 text-accent" />
-                        <span>hello@capleosage.com</span>
+                        <span></span>
                       </div>
                     </div>
                   </div>

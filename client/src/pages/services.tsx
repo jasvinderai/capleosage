@@ -11,7 +11,7 @@ export default function Services() {
       description: "Transform raw data into strategic insights with robust data pipelines, governance frameworks, and advanced analytics solutions.",
       category: "Data & Analytics",
       duration: "4-16 weeks",
-      pricing: "Starting at $25,000",
+      pricing: "Engagements scoped based on complexity and goals",
       features: [
         "Data maturity & readiness assessment (1–2 week audit)",
         "Data strategy & roadmap (3–6 weeks)",
@@ -34,7 +34,7 @@ export default function Services() {
       description: "Navigate complex digital initiatives with strategic roadmaps, technology selection, and change management expertise.",
       category: "Digital Strategy",
       duration: "6-20 weeks",
-      pricing: "Starting at $35,000",
+      pricing: "Let’s define the problem first, then the price",
       features: [
         "Digital maturity assessment & DX roadmap",
         "Business case & ROI modeling for DX projects",
@@ -57,7 +57,7 @@ export default function Services() {
       description: "Elevate your brand presence and user experience through strategic design thinking and comprehensive brand enhancement.",
       category: "Design & Brand",
       duration: "3-12 weeks",
-      pricing: "Starting at $15,000",
+      pricing: "Start with a conversation—pricing follows clarity",
       features: [
         "Digital Presence Audit",
         "Brand Identity Refresh",

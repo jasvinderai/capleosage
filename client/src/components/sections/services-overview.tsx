@@ -33,7 +33,7 @@ export default function ServicesOverview() {
     },
     {
       icon: Palette,
-      title: "Design Transformation & Enhancement",
+      title: "Design Enhancement",
       description: "Elevate your brand presence and user experience through strategic design thinking and comprehensive brand enhancement.",
       features: [
         "Digital presence audit & optimization",

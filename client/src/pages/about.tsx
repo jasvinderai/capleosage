@@ -6,24 +6,24 @@ export default function About() {
   const teamMembers = [
     {
       name: "Jasvinder Sethi",
-      position: "Co-Founder & CEO",
+      position: "Chief Data & Analytics Officer",
       experience: "10+ years in data engineering",
       bio: "Former senior data architect at major Calgary energy companies. Specialized in building scalable data platforms that drive business insights.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
     },
     {
       name: "Geetika Kour",
       position: "Co-Founder & CTO",
       experience: "7+ years in digital transformation",
       bio: "Digital transformation specialist with extensive experience in ERP implementations and change management across various industries.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
     },
     {
       name: "Seerath Sethi",
       position: "Chief Design Officer",
       experience: "5+ years in design strategy",
       bio: "Award-winning design strategist with expertise in brand transformation and user experience optimization for enterprise clients.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
     }
   ];
 
@@ -48,9 +48,9 @@ export default function About() {
 
   const stats = [
     { number: "15+", label: "Projects Completed", description: "Across various industries" },
-    { number: "8+", label: "Years Experience", description: "In Calgary market" },
-    { number: "50+", label: "Calgary Clients", description: "From startups to enterprises" },
-    { number: "100%", label: "Commitment to Results  ", description: "Based on project completion surveys" }
+    { number: "10+", label: "Years Combined Experience ", description: "Across consulting, data, and design strategy " },
+    { number: "3+", label: "Key Service Areas ", description: "Data Engineering | Digital Transformation | Design Strategy " },
+    { number: "100%", label: "Commitment to Results  ", description: "Focused on measurable business impact" }
   ];
 
 
@@ -83,13 +83,15 @@ export default function About() {
               <div>
                 <h2 className="text-4xl font-bold mb-6 text-primary" data-testid="company-story-title">Our Story</h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Founded in Calgary with a vision to bridge the gap between cutting-edge technology and practical business solutions, CAPLEO Sage Solutions emerged from our founders' extensive experience in the energy, finance, and technology sectors.
+                  Founded in Calgary, CAPLEO Sage Solutions was born from a vision: to transform cutting-edge technology into practical, results-driven solutions for businesses.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6">
-                  We recognized that many Calgary businesses were struggling to harness the full potential of their data and digital assets. Our mission became clear: provide world-class consulting services with a deep understanding of the local market dynamics.
+                  Leveraging our founders’ extensive experience in the energy, finance, and technology sectors, we saw a common challenge—many Calgary businesses struggled to unlock the full potential of their data and digital assets.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  Today, we're proud to be Calgary's trusted partner for digital transformation, helping businesses across Western Canada achieve measurable success through strategic technology adoption.
+                  Our mission is simple: deliver world-class consulting services that combine deep industry knowledge with a practical understanding of local market dynamics.
+
+Today, CAPLEO Sage Solutions is proud to be a trusted partner for digital transformation, helping businesses across Western Canada drive measurable results through strategic technology adoption.
                 </p>
               </div>
               <div className="relative">
